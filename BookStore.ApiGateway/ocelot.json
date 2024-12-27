@@ -1,0 +1,172 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/user",
+      "UpstreamPathTemplate": "/api/user/register",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7062
+        }
+      ],
+      "UpstreamHttpMethod": "POST"
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/login",
+      "UpstreamPathTemplate": "/api/user/login",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7062
+        }
+      ],
+      "UpstreamHttpMethod": "POST"
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/forgot-password",
+      "UpstreamPathTemplate": "/api/user/forgotpassword",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7062
+        }
+      ],
+      "UpstreamHttpMethod": "POST"
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/reset-password",
+      "UpstreamPathTemplate": "/api/user/resetpassword",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7062
+        }
+      ],
+      "UpstreamHttpMethod": "POST"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin",
+      "UpstreamPathTemplate": "/api/admin/register",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7062
+        }
+      ],
+      "UpstreamHttpMethod": "POST"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/login",
+      "UpstreamPathTemplate": "/api/admin/login",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7062
+        }
+      ],
+      "UpstreamHttpMethod": "POST"
+    },
+    {
+      "DownstreamPathTemplate": "/api/book",
+      "UpstreamPathTemplate": "/api/addbook",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7183
+        }
+      ],
+      "UpstreamHttpMethod": "POST"
+    },
+    {
+      "DownstreamPathTemplate": "/api/book",
+      "UpstreamPathTemplate": "/api/getbook",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7183
+        }
+      ],
+      "UpstreamHttpMethod": "GET"
+    },
+    {
+      "DownstreamPathTemplate": "/api/book/{bookId}",
+      "UpstreamPathTemplate": "/api/book/update/{bookId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7183
+        }
+      ],
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/book/{id}",
+      "UpstreamPathTemplate": "/api/book/delete/{id}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7183
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/book/{Id}",
+      "UpstreamPathTemplate": "/api/book/{Id}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7183
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart",
+      "UpstreamPathTemplate": "/api/cart",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7283
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart",
+      "UpstreamPathTemplate": "/api/cart/update",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7283
+        }
+      ],
+      "UpstreamHttpMethod": [ "PATCH" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart",
+      "UpstreamPathTemplate": "/api/cart",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7283
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart/{bookId}",
+      "UpstreamPathTemplate": "/api/cart/{bookId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7283
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7128"
+  }
+}
