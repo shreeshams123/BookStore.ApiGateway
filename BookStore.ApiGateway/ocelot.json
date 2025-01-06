@@ -124,13 +124,20 @@
     {
       "DownstreamPathTemplate": "/api/cart",
       "UpstreamPathTemplate": "/api/cart",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ],
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 7283
         }
       ],
-      "UpstreamHttpMethod": [ "POST" ]
+      "CORS": {
+        "AllowedOrigins": [ "http://localhost:4200" ],
+        "AllowedMethods": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ],
+        "AllowedHeaders": [ "Content-Type", "Authorization" ],
+        "AllowCredentials": true
+      }
     },
     {
       "DownstreamPathTemplate": "/api/cart",
@@ -144,17 +151,6 @@
       "UpstreamHttpMethod": [ "PATCH" ]
     },
     {
-      "DownstreamPathTemplate": "/api/cart",
-      "UpstreamPathTemplate": "/api/cart",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7283
-        }
-      ],
-      "UpstreamHttpMethod": [ "GET" ]
-    },
-    {
       "DownstreamPathTemplate": "/api/cart/{bookId}",
       "UpstreamPathTemplate": "/api/cart/{bookId}",
       "DownstreamHostAndPorts": [
@@ -164,6 +160,127 @@
         }
       ],
       "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/wishlist",
+      "UpstreamPathTemplate": "/api/wishlist",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7283
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/wishlist",
+      "UpstreamPathTemplate": "/api/wishlist",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7283
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/wishlist/{bookId}",
+      "UpstreamPathTemplate": "/api/wishlist/{bookId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7283
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/order",
+      "UpstreamPathTemplate": "/api/order",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/order/{orderId}",
+      "UpstreamPathTemplate": "/api/order/{orderId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/order",
+      "UpstreamPathTemplate": "/api/order",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customerDetails",
+      "UpstreamPathTemplate": "/api/customerDetails",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customerDetails",
+      "UpstreamPathTemplate": "/api/customerDetails",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customerDetails/{addressId}",
+      "UpstreamPathTemplate": "/api/customerDetails/{addressId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customerDetails/{addressId}",
+      "UpstreamPathTemplate": "/api/customerDetails/{addressId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "PATCH" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customerDetails/{addressId}",
+      "UpstreamPathTemplate": "/api/customerDetails/{addressId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7094
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ]
     }
   ],
   "GlobalConfiguration": {
